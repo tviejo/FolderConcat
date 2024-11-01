@@ -1,29 +1,42 @@
 # FolderConcat
 
-**FolderConcat** is a C program that recursively concatenates all printable (text) files in a specified directory, generating a single output file (or printing to `stdout` if no output file is provided). The output includes a directory tree at the beginning, followed by the content of each printable file.
+FolderConcat is a C program that recursively concatenates all printable (text) files in a specified directory, generating a single output file or printing to stdout if no output file is provided. The output includes a directory tree at the beginning, followed by the content of each printable file.
+Table of Contents
 
-## Features
+    Features
+    Requirements
+    Installation
+    Usage
+    Makefile Commands
+    How It Works
+    License
+    Contributing
+    Author
 
-- **Directory Tree**: Displays the directory structure at the top of the output for easy navigation.
-- **File Concatenation**: Combines the content of all printable files in the specified directory and its subdirectories into a single output.
-- **Flexible Output**: Writes to an output file if provided, or prints to `stdout` if not.
+Features
 
-## Requirements
+    Directory Tree: Displays the directory structure at the top of the output for easy navigation.
+    File Concatenation: Combines the content of all printable files in the specified directory and its subdirectories.
+    Flexible Output: Writes to an output file if provided, or prints to stdout if not.
 
-- A C compiler (`gcc` or `cc`)
-- `make` for easy compilation and running
+Requirements
 
-## Installation
+    C compiler (gcc or cc)
+    make for easy compilation and running
+
+Installation
 
 Clone the repository:
-```bash
+
+bash
+
 git clone https://github.com/tviejo/FolderConcat.git
 cd FolderConcat
 
 Usage
 Build the Program
 
-Use the provided Makefile to compile the program:
+Use the Makefile to compile the program:
 
 bash
 
@@ -48,33 +61,14 @@ bash
 ./FolderConcat /path/to/directory output.txt
 
 This will generate output.txt with the directory structure and concatenated content of each printable file.
-Run Examples
+Makefile Commands
 
-You can also use the Makefile to execute a sample run:
-
-bash
-
-make run
-
-Or display usage information:
-
-bash
-
-make help
-
-Clean Up
-
-Remove object files and the executable:
-
-bash
-
-make clean
-
-Remove all build artifacts, including the executable:
-
-bash
-
-make fclean
+    Build the Program: make
+    Run Example: make run
+    (Runs the program with a sample directory path)
+    Display Usage Information: make help
+    Clean Object Files: make clean
+    Full Clean (including executable): make fclean
 
 How It Works
 
